@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 @Entity
 @Table
 public class topanime {
-
+    @Id
     @Column
     private int id;
 
@@ -30,5 +30,3 @@ public class topanime {
     @Column
     private String season;
 }
-
-
