@@ -29,4 +29,36 @@ public class topanime {
 
     @Column
     private String season;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getImage() {
+        return imageurl;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public Double getRating() {
+        return rating;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public Integer getEpisodes() {
+        return episodes;
+    }
+
+    public String getSynopsis() {
+        return synopsis;
+    }
+
+    public String getSeason() {
+        return season;
+    }
 }
