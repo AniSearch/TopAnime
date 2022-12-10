@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import io.anisearch.topAnime.Repo.UserTA;
 import io.anisearch.topAnime.model.topanime;
+import io.anisearch.topAnime.services.JikanTopAnime;
 
 @RestController
 public class ApiController {
@@ -23,5 +24,12 @@ public class ApiController {
     @GetMapping(value = "/getTopAnime")
     public List<topanime> topAnime() {
         return userTA.findAll();
+    }
+
+    @GetMapping(value = "/getTopAnimeTest")
+    public String naya() {
+        JikanTopAnime jk = new JikanTopAnime();
+        jk.firstTwintyFive();
+        return "Success";
     }
 }
