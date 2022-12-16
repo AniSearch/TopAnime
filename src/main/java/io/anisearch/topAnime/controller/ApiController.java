@@ -27,9 +27,9 @@ public class ApiController {
     }
 
     @GetMapping(value = "/getTopAnimeTest")
-    public String naya() {
+    public net.minidev.json.JSONObject naya() {
         JikanTopAnime jk = new JikanTopAnime();
-        jk.firstTwintyFive();
-        return "Success";
+        return jk.firstTwintyFive();
+        // return "Success";
     }
 }

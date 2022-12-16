@@ -1,15 +1,16 @@
 package io.anisearch.topAnime.services;
 
-import org.json.JSONObject;
 import org.springframework.web.client.RestTemplate;
+
+import net.minidev.json.JSONObject;
 
 public class JikanTopAnime {
     RestTemplate restTemplate = new RestTemplate();
 
-    public int firstTwintyFive() {
+    public JSONObject firstTwintyFive() {
         JSONObject json = restTemplate.getForObject("https://api.jikan.moe/v4/top/anime", JSONObject.class);
-        System.out.println(json);
-        return 0;
+
+        return json;
 
     }
 }
