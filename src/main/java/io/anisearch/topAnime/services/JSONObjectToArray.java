@@ -9,14 +9,17 @@ import io.anisearch.topAnime.model.topanime;
 
 public class JSONObjectToArray {
 
-    public ArrayList JsonObToJsonArray(String json) {
+    public ArrayList JsonObToJsonArray(String json, int n) {
         JSONObject jk = new JSONObject(json);
         JSONArray array = jk.getJSONArray("data");
         ArrayList<topanime> tp2 = new ArrayList<topanime>();
         for (int i = 0; i < array.length(); i++) {
             JSONObject ob = array.getJSONObject(i);
             topanime tp = new topanime();
-            tp.id = i + 1;
+            if (n == 0)
+                tp.id = i + 1;
+            else if (n == 26)
+                tp.id = n - 25 + i;
             tp.imageurl = ob.getJSONObject("images").getJSONObject("jpg").getString("image_url");
             tp.title = ob.getString("title");
             tp.rating = ob.getDouble("score");

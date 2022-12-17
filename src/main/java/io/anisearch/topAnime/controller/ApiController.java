@@ -27,9 +27,10 @@ public class ApiController {
     }
 
     @GetMapping(value = "/getTopAnimeTest")
-    public void naya() {
+    public boolean naya() {
         JikanTopAnimeFetching jk = new JikanTopAnimeFetching();
         userTA.saveAll(jk.firstTwintyFive());
-
+        // userTA.saveAll(jk.secondTwintyFive());
+        return true;
     }
 }
