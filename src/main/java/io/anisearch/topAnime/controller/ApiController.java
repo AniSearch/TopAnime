@@ -26,7 +26,7 @@ public class ApiController {
         return userTA.findAll();
     }
 
-    @GetMapping(value = "/getTopAnimeTest")
+    @GetMapping(value = "/loadTopAnime")
     public boolean naya() {
         JikanTopAnimeFetching jk = new JikanTopAnimeFetching();
         userTA.saveAll(jk.firstTwintyFive());
