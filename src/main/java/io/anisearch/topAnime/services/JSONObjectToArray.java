@@ -1,10 +1,12 @@
 package io.anisearch.topAnime.services;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class JSONObjectToArray {
     public void JsonObToJsonArray(String json) {
-        JSONObject jk2 = new JSONObject(json);
-        System.out.println(jk2);
+        JSONObject jk = new JSONObject(json);
+        JSONArray array = jk.getJSONArray("data");
+        System.out.println(array.get(0));
     }
 }
