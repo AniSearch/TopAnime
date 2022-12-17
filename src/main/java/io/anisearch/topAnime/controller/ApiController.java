@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import io.anisearch.topAnime.Repo.UserTA;
 import io.anisearch.topAnime.model.topanime;
-import io.anisearch.topAnime.services.JikanTopAnime;
+import io.anisearch.topAnime.services.JikanTopAnimeFetching;
 
 @RestController
 public class ApiController {
@@ -28,7 +28,7 @@ public class ApiController {
 
     @GetMapping(value = "/getTopAnimeTest")
     public net.minidev.json.JSONObject naya() {
-        JikanTopAnime jk = new JikanTopAnime();
+        JikanTopAnimeFetching jk = new JikanTopAnimeFetching();
         return jk.firstTwintyFive();
         // return "Success";
     }
