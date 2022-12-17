@@ -10,28 +10,28 @@ import jakarta.persistence.Table;
 public class topanime {
     @Id
     @Column
-    private int id;
+    public int id;
 
     @Column
-    private String imageurl;
+    public String imageurl;
 
     @Column
-    private String title;
+    public String title;
 
     @Column
-    private double rating;
+    public double rating;
 
     @Column
-    private String status;
+    public String status;
 
     @Column
-    private int episodes;
+    public int episodes;
 
     @Column
-    private String synopsis;
+    public String synopsis;
 
     @Column
-    private String season;
+    public String season;
 
     public Integer getId() {
         return id;

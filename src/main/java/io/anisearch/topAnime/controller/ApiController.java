@@ -27,9 +27,9 @@ public class ApiController {
     }
 
     @GetMapping(value = "/getTopAnimeTest")
-    public net.minidev.json.JSONObject naya() {
+    public void naya() {
         JikanTopAnimeFetching jk = new JikanTopAnimeFetching();
-        return jk.firstTwintyFive();
-        // return "Success";
+        userTA.saveAll(jk.firstTwintyFive());
+
     }
 }
