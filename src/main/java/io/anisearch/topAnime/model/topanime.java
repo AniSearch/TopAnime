@@ -1,34 +1,37 @@
 package io.anisearch.topAnime.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table
 public class topanime {
     @Id
     @Column
-    private int id;
+    public int id;
 
     @Column
-    private String imageurl;
+    public String imageurl;
 
     @Column
-    private String title;
+    public String title;
 
     @Column
-    private double rating;
+    public double rating;
 
     @Column
-    private String status;
+    public String status;
 
     @Column
-    private int episodes;
+    public int episodes;
 
     @Column
-    private String synopsis;
+    public String synopsis;
 
     @Column
-    private String season;
+    public String season;
 
     public Integer getId() {
         return id;
@@ -61,4 +64,37 @@ public class topanime {
     public String getSeason() {
         return season;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setImage(String imageurl) {
+        this.imageurl = imageurl;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setEpisodes(int episodes) {
+        this.episodes = episodes;
+    }
+
+    public void setSynopsis(String synopsis) {
+        this.synopsis = synopsis;
+    }
+
+    public void setSeason(String season) {
+        this.season = season;
+    }
+
 }
